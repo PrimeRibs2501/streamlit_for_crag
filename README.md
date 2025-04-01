@@ -35,6 +35,7 @@ O **Streamlit for CRAG** é uma aplicação web interativa desenvolvida com Stre
 
 2. Instale as dependências utilizando Poetry:
    ```
+   poetry lock
    poetry install
    ```
 
