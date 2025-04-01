@@ -1,118 +1,96 @@
-# Streamlit for CRAG
+# Streamlit for CRAG (EM DESENVOLVIMENTO)
 
-![Streamlit Logo](https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png)  
-![Docker Logo](https://iconduck.com/icons/677/docker)  
-![Python Logo](https://www.iconfinder.com/icons/4518857/python_icon)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-A **Streamlit** application designed to streamline and enhance CRAG-related workflows. This project leverages **Python** and **Docker** to provide an efficient and scalable solution.
+## Sobre o Projeto
 
----
-
-## 📋 Table of Contents
-
-- [About](#about)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+O **Streamlit for CRAG** é uma aplicação web interativa desenvolvida com Streamlit para facilitar fluxos de trabalho relacionados ao CRAG (Custom Resource Allocation Generator). A aplicação é escalável e utiliza Docker para implantação.
 
 ---
 
-## 🛠️ About
+## Tecnologias Principais
 
-The **Streamlit for CRAG** project is a web application built using Streamlit, designed to simplify tasks related to CRAG (Custom Resource Allocation Generator). It provides an intuitive interface for users and integrates seamlessly with Docker for deployment.
-
-This repository includes:
-- A Python-based Streamlit app (`streamlit_for_crag.py`).
-- Configuration files (`settings.py`, `.env`) for customization.
-- Docker support for containerized deployment.
+- **Python**: Linguagem base do projeto
+- **Streamlit**: Framework para criação de aplicações web interativas
+- **Docker**: Containerização da aplicação
 
 ---
 
-## 🖥️ Technologies Used
+## Requisitos
 
-This project utilizes the following technologies:
-- **Python**: Main programming language.
-- **Streamlit**: Framework for building interactive web applications.
-- **Docker**: For containerization and deployment.
-- **Poetry**: Dependency management tool.
+- Python 3.8+
+- Docker e Docker Compose
 
 ---
 
-## 🚀 Installation
+## Instalação
 
-Follow these steps to set up the project locally:
+1. Clone o repositório:
+   ```
+   git clone https://github.com/PrimeRibs2501/streamlit_for_crag.git
+   cd streamlit_for_crag
+   ```
 
-1. Clone the repository:
-git clone https://github.com/PrimeRibs2501/streamlit_for_crag.git
-cd streamlit_for_crag
+2. Instale as dependências utilizando Poetry:
+   ```
+   poetry install
+   ```
 
-text
+3. Configure as variáveis de ambiente:
+   - Crie um arquivo `.env` na raiz do projeto.
+   - Adicione as configurações necessárias (consulte `settings.py`).
 
-2. Install dependencies using Poetry:
-poetry install
-
-text
-
-3. Set up environment variables:
-- Create a `.env` file in the root directory.
-- Add necessary configurations (refer to `settings.py`).
-
-4. Run the application:
-streamlit run streamlit_for_crag.py
-
-text
+4. Execute a aplicação:
+   ```
+   streamlit run streamlit_for_crag.py
+   ```
 
 ---
 
-## 📚 Usage
+## Uso
 
-To use the application:
+### Localmente
 
-1. Start the Streamlit server by running the command above.
-2. Open your browser and navigate to `http://localhost:8501`.
-3. Interact with the CRAG-related tools provided by the app.
+1. Após executar o comando acima, acesse a aplicação em `http://localhost:8501`.
+2. Utilize a interface para interagir com as ferramentas relacionadas ao CRAG.
 
-For Docker-based deployment:
-docker build -t streamlit_for_crag .
-docker run -p 8501:8501 streamlit_for_crag
+### Com Docker
 
-text
+1. Construa a imagem Docker:
+   ```
+   docker build -t streamlit_for_crag .
+   ```
 
----
-
-## 📂 Folder Structure
-
-Below is an overview of the project's folder structure:
-
-├── docker/ # Docker-related files
-├── .env # Environment variables
-├── .gitignore # Git ignore rules
-├── poetry.lock # Dependency lock file
-├── pyproject.toml # Project configuration file (Poetry)
-├── settings.py # Application settings
-├── streamlit_for_crag.py # Main Streamlit app script
-
-text
+2. Execute o container:
+   ```
+   docker run -p 8501:8501 streamlit_for_crag
+   ```
 
 ---
 
-## 🤝 Contributing
+## Estrutura do Projeto
 
-Contributions are welcome! To contribute:
-
-1. Fork this repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m "Add feature"`).
-4. Push to your branch (`git push origin feature-name`).
-5. Create a pull request.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
+streamlit_for_crag/
+├── docker/               # Arquivos relacionados ao Docker
+├── .env                  # Variáveis de ambiente
+├── .gitignore            # Regras de exclusão do Git
+├── poetry.lock           # Arquivo de bloqueio de dependências (Poetry)
+├── pyproject.toml        # Configuração do projeto (Poetry)
+├── settings.py           # Configurações da aplicação
+├── streamlit_for_crag.py # Script principal da aplicação Streamlit
+```
 
 ---
+
+## Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`).
+3. Commit suas alterações (`git commit -m 'Add some AmazingFeature'`).
+4. Push para a branch (`git push origin feature/AmazingFeature`).
+5. Abra um Pull Request.
