@@ -21,7 +21,7 @@ O **Streamlit for CRAG** é uma aplicação web interativa desenvolvida com Stre
 ## Requisitos
 
 - Python 3.8+
-- Docker e Docker Compose
+- Docker
 
 ---
 
